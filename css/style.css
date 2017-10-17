@@ -1,0 +1,70 @@
+
+
+body {
+    padding: 45px;
+}
+
+
+#key {
+    position: relative;
+    color: #3D68B4;
+    font-size: 27px;
+    left: 23px;
+}
+#score {
+    height: 108px;
+}
+
+.thumbnail>img {
+    margin-right: auto;
+    margin-left: auto;
+    height: 180px;
+    width: 134;
+}
+
+.thumbnail {
+  
+    padding: 4px;
+    width: 149px;
+    margin-bottom: 20px;
+    margin-left:20px;
+    line-height: 1.42857143;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    -webkit-transition: border .2s ease-in-out;
+    -o-transition: border .2s ease-in-out;
+    transition: border .2s ease-in-out;
+}
+
+#scoreToMatch {
+    height: 108px;
+    font-size: 69px;
+    padding: 12px;
+    background: url("images/kaos.png");
+}
+
+#score {
+    height: 108px;
+    font-size: 69px;
+    padding: 12px;
+}
+
+#foo {
+    width: 166px;
+    height: 18px;
+    margin: 13px;
+}
+
+.letter-button {
+	height: 21px;
+    width: 137px;
+    font-size: 16px;
+}
+
+
+
+
+
+
+

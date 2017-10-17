@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>CrystalsCollector Game</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+</head>
+<body onload="start();">
+
+	
+	<h1 id="test"></h1>
+
+<!-- row for the number to match and tracker -->
+<div class="row">
+<!-- col -->
+	<div class="col-md-4"> 
+		 <h3>Instructions</h3>
+		 <p>Each crystals has points.   Click each crystals to collect points to match the KEY to score a point.  If your points exceed the KEY's value - you lose.</p>
+	</div>
+<!-- col -->
+  	<div class="col-md-2">
+  		<p id="key">Key Number</p>
+	    <a href="#" class="thumbnail" id="scoreToMatch">
+
+		 </a>
+  	</div>
+<!-- col -->
+<div class="col-md-2" id="resetParent">
+	    <a href="#" class="thumbnail" id="reset">
+	    	<h1 id="gameStatus"></h1>
+	    	<h2 id="win"></h2>
+		 </a>
+  	</div>
+<!-- col -->
+  	<div class="col-md-4">
+  		<p id="key">Your Number</p>
+	  	<a href="#" class="thumbnail" id="score">	
+		 </a>
+	</div>
+ </div>
+
+<!-- row for the crystals-->
+
+<div class="row" id="parentDiv">
+<!-- col -->
+  <div class="col-xs-3">
+    <a href="#" class="thumbnail" id="crystal1">
+      <img src="images/amberCrystal.jpg" alt="amber">
+    </a>
+  </div>
+<!-- col -->
+  <div class="col-xs-3">
+    <a href="#" class="thumbnail" id="crystal2">
+      <img src="images/blueCrystal.jpg" alt="blue">
+    </a>
+  </div>
+<!-- col -->
+  <div class="col-xs-3">
+    <a href="#" class="thumbnail" id="crystal3">
+      <img src="images/smokeCrystal.jpg" alt="smoke">
+    </a>
+  </div>
+<!-- col -->
+  <div class="col-xs-3">
+    <a href="#" class="thumbnail" id="crystal4">
+      <img src="images/redCrystal.jpg" alt="red">
+    </a>
+  </div>
+
+</div>
+
+<!-- new row -->
+<div class="row">
+<!-- col -->
+  <div class="col-lg-12">
+    <a href="#" class="thumbnail" id="crystal1">
+      <h1>wins:<h2 id="plus"> </h2></h1>
+    </a>
+  </div>
+ </div>
+<!-- new row -->
+<div class="row">
+	<!-- col -->
+  <div class="col-lg-12">
+    <a href="#" class="thumbnail" id="crystal2">
+      <h1>loss:<h2 id="minus"> </h2></h1>
+    </a>
+  </div>
+</div>
+
+
+<script src="javascript/game.js"></script>
+
+</body>
+
+
+</html>
