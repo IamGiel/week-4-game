@@ -3,16 +3,23 @@
 
 //set our variables
 
-var numberToMatch = Math.floor(Math.random() * 120) + 30;
-var c1Array = [12,4,6];
-var c2Array = [14,10,3];
-var c3Array = [7,5,9];
-var c4Array = [6,2,5];
+var numberToMatch = Math.floor(Math.random() * 103) + 19;
+// var c1Array = [12,4,6];
+// var c2Array = [14,10,3];
+// var c3Array = [7,5,9];
+// var c4Array = [6,2,5];
+var crystalArr = [crystal1, crystal2, crystal3, crystal4];
+for (var i = 0; i < crystalArr.length; i++){
+		crystalArr[i] = Math.floor(Math.random() * 12) + 1;
+		console.log(crystalArr[i]);
 
-var crystal1 = c1Array[Math.floor(Math.random() * c1Array.length)];	//random generated number, from an arrary of choices;
-var crystal2 = c2Array[Math.floor(Math.random() * c2Array.length)];	 
-var crystal3 = c3Array[Math.floor(Math.random() * c3Array.length)];	
-var crystal4 = c4Array[Math.floor(Math.random() * c4Array.length)];	
+	}
+
+
+// var crystal1 = Math.floor(Math.random() * 12) + 1;	//random generated number, from an arrary of choices;
+// var crystal2 = Math.floor(Math.random() * 12) + 1;	 
+// var crystal3 = Math.floor(Math.random() * 12) + 1;
+// var crystal4 = Math.floor(Math.random() * 12) + 1;	
 
 var score = 0;
 var tempScore = 0;
@@ -30,10 +37,10 @@ var sum;
 // and is given a new number to increment at the beginning of a new game.
 console.log("Number to match: "+ numberToMatch);
 console.log("scoreTracker: " + score);
-console.log("crystal1: " + crystal1);
-console.log("crystal2: " + crystal2);
-console.log("crystal3: " + crystal3);
-console.log("crystal4: " + crystal4);
+// console.log("crystal1: " + crystalArr[0]);//1
+// console.log("crystal2: " + crystalArr[1]);//2
+// console.log("crystal3: " + crystalArr[2]);//3
+// console.log("crystal4: " + crystalArr[3]);//4
 console.log(arguement1);
 
  
@@ -57,6 +64,8 @@ $("#gameStatus").on("click", function(){//reset function
 	// $("#gameStatus").remove();
 	$("#win").text("");
 
+	
+	
 	document.getElementById('crystal1').style.pointerEvents = 'auto'; 
 	document.getElementById('crystal2').style.pointerEvents = 'auto'; 
 	document.getElementById('crystal3').style.pointerEvents = 'auto'; 
@@ -64,39 +73,40 @@ $("#gameStatus").on("click", function(){//reset function
 
 
 
-	arguement1 = []
+	arguement1 = [];
 	numberToMatch = Math.floor(Math.random() * 120) + 30;
 	$("#scoreToMatch").text(numberToMatch);
 
-	var c1Array = [5,17,3];
-	var c2Array = [6,11,12];
-	var c3Array = [3,9,14];
-	var c4Array = [8,10,2];
+	// var c1Array = [5,17,3];
+	// var c2Array = [6,11,12];
+	// var c3Array = [3,9,14];
+	// var c4Array = [8,10,2];
+	var crystalArr = [crystal1, crystal2, crystal3, crystal4];
+	for (var i = 0; i < crystalArr.length; i++){
+		crystalArr[i] = Math.floor(Math.random() * 12) + 1;
+		console.log(crystalArr[i]);
+
+	} 
+
+	crystalArr[i];
 	
-	crystal1 = c1Array[Math.floor(Math.random() * c1Array.length)];	//random generated number, from an arrary of choices;
-	crystal2 = c2Array[Math.floor(Math.random() * c2Array.length)];	 
-	crystal3 = c3Array[Math.floor(Math.random() * c3Array.length)];	
-	crystal4 = c4Array[Math.floor(Math.random() * c4Array.length)];	
 	console.log("Number to match: "+ numberToMatch);
 	console.log("scoreTracker: " + score);
-	console.log("crystal1: " + crystal1);
-	console.log("crystal2: " + crystal2);
-	console.log("crystal3: " + crystal3);
-	console.log("crystal4: " + crystal4);
+	
 	console.log(arguement1);
 	newScore = numberToMatch - numberToMatch;
 	document.getElementById("score").innerHTML = newScore;
 
-	console.log("new: " + numberToMatch);
+	console.log("new number to match: " + numberToMatch);
 });
 
-	
+
 function adder () {//sums up arguement1 array / adds elements in the array
 		
 		sum = arguement1.reduce(add, 0);
 
 		function add(a,b) {
-		    return parseFloat(a) + parseFloat(b);//aha!!!!		
+		    return parseInt(a) + parseInt(b);//aha!!!!	
 		}
 		console.log(sum);	
 		document.getElementById("score").innerHTML = sum;
@@ -122,12 +132,18 @@ function adder () {//sums up arguement1 array / adds elements in the array
 	}
 
 	function disableClicks() {
-			crystal1 = 0;
-			crystal2 = 0;
-			crystal3 = 0;
-			crystal4 = 0;
+			
 		
-		// To disable:    
+		// To disable:
+		for (var i = 0; i < crystalArr.length; i++){
+			crystalArr[i];
+			console.log(crystalArr[i]);
+
+		}
+			crystalArr[i] = 0;
+			console.log(crystalArr[0]);
+			// crystalArr[0].style.pointerEvents = 'auto'; 
+    
 		document.getElementById('crystal1').style.pointerEvents = 'none';
 		document.getElementById('crystal2').style.pointerEvents = 'none';
 		document.getElementById('crystal3').style.pointerEvents = 'none';
@@ -145,25 +161,25 @@ function start(){
 };
 //crystal divs on click
 $("#crystal1").on("click", function(){
-	$("#crystal1").val(crystal1); //setvalue to crystal1
+	$("#crystal1").val(crystalArr[0]); //setvalue to crystal1
 	arguement1.push($(this).val());
 	adder();
 
 });
 $("#crystal2").on("click", function(){
-	$("#crystal2").val(crystal2); //setvalue to crystal2
+	$("#crystal2").val(crystalArr[1]); //setvalue to crystal2
 	arguement1.push($(this).val());	
 	adder();
 });
 
 $("#crystal3").on("click", function(){
-	$("#crystal3").val(crystal3); //setvalue to crystal3
+	$("#crystal3").val(crystalArr[2]); //setvalue to crystal3
 	arguement1.push($(this).val());	
 	adder();
 });
 
 $("#crystal4").on("click", function(){
-	$("#crystal4").val(crystal4); //setvalue to crystal4
+	$("#crystal4").val(crystalArr[3]); //setvalue to crystal4
 	arguement1.push($(this).val());	
 	adder();
 });
